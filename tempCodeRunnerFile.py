@@ -1,0 +1,2 @@
+Translator
+translator = Translator()

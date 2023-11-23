@@ -1,0 +1,33 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|F9||0|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|WinActivate||1|50|WinActivate||ahk_class Notepad|||1|
+2|Home|{Home}|1|50|Send|||||3|
+3|Shift + Control + Right|{Shift Down}{Control Down}{Right}{Control Up}{Shift Up}|1|50|Send|||||5|
+4|Control + c|{Control Down}{c}{Control Up}|1|50|Send|||||7|
+5|[Assign Variable]|lang := %Clipboard%|1|0|Variable|||||9|
+6|Right|{Right}|2|50|Send|||||10|
+7|Shift + End|{Shift Down}{End}{Shift Up}|1|50|Send|||||12|
+8|Control + c|{Control Down}{c}{Control Up}|1|50|Send|||||14|
+9|[Assign Variable]|translated := %Clipboard%|1|0|Variable|||||16|
+10|Home|{Home}|1|50|Send|||||17|
+11|Down|{Down}|1|50|Send|||||19|
+12|Shift + End|{Shift Down}{End}{Shift Up}|1|100|Send|||||21|
+13|Control + c|{Control Down}{c}{Control Up}|1|50|Send|||||23|
+14|[Assign Variable]|desc := %Clipboard%|1|0|Variable|||||25|
+15|Home|{Home}|1|50|Send|||||26|
+16|Down|{Down}|1|50|Send|||||28|
+17|WinActivate||1|50|WinActivate||ahk_class Chrome_WidgetWin_1|||30|
+18|Control + f|{Control Down}{f}{Control Up}|1|50|Send|||||32|
+19|[Text]|%lang%|1|50|Send|||||34|
+20|Enter|{Enter}|1|50|Send|||||36|
+21|Left Click, Continue, FoundX, FoundY|0, 0, 2560, 1440, 0x78CC66, 10, Fast RGB|1|50|PixelSearch|UntilFound|Window|MENCARI HIGHLIGHT SEARCH||38|
+22|Left Move & Click|Rel 630, 5 Left, 1|1|10|Click|||GESER HARUS PAS!!!!||47|
+23|Left Click, Continue, FoundX, FoundY, 1|0, 0, 2560, 1440, .\img\titlereq.png|1|50|ImageSearch|UntilFound|Window|TEKS TITLE||49|
+24|[Text]|%translated%|1|50|Send|||||59|
+25|Left Click, Continue, FoundX, FoundY, 1|0, 0, 2560, 1440, .\img\desc.png|1|50|ImageSearch|UntilFound|Window|TEKS DESKRIPSI||61|
+26|[Text]|%desc%|1|50|Send|||||71|
+27|Left Click, Continue, FoundX, FoundY, 1|0, 0, 2560, 1440, .\img\publishbutton.png|1|50|ImageSearch|UntilFound|Window|TOMBOL PUBLISH||73|
+28|Continue, Continue, FoundX, FoundY, 1|0, 0, 2560, 1440, .\img\studio.png|1|50|ImageSearch|UntilFound|Window|ICON YOUTUBE STUDIO||83|
+

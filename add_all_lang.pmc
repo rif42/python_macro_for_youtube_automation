@@ -1,0 +1,13 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|F9||0|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|End|{End}|1|100|Send|||||1|
+2|Left Click, Continue, FoundX, FoundY, 1|0, 0, 2560, 1440, *10 C:\Users\Administrator\AppData\Roaming\MacroCreator\Screenshots\Screen_20231114205247.png|1|100|ImageSearch|UntilFound|Screen|MENCARI TOMBOL ADD LANGUAGE||3|
+3|If Image/Pixel Found||1|0|If_Statement|||||13|
+4|[Pause]||1|500|Sleep|||||15|
+5|Enter|{Enter}|1|100|Send|||||16|
+6|[Else]|Else|1|0|If_Statement|||||18|
+7|End|{End}|1|100|Send|||||21|
+8|[End If]|EndIf|1|0|If_Statement|||||23|
+
